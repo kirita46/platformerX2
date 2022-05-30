@@ -5,19 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class buttomscript : MonoBehaviour
 {
-    public void LoadNewLevel1(string sceneName)
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Scenes/wanted");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Quitgame()
     {
-        
+        Debug.Log("QUIT");
+        Application.Quit();
     }
 }
